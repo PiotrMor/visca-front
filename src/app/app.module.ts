@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpService } from './http.service';
+import { MatInputModule } from '@angular/material/input'
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { HttpService } from './http.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule
   ],
   providers: [
     HttpService

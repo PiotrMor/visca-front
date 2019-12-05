@@ -4,35 +4,52 @@
     Welcome to visca web controller!
   </h1>
 </div>
-<h2>Available actions: </h2>
-<ul>
-  <li>
-    <button mat-button (click)="sendCommand('HOME')">HOME</button>
-  </li>
-  <li>
-    <button mat-button (click)="sendCommand('DOWN')">DOWN</button> 
-  </li>
-  <li>
-    <button mat-button (click)="sendCommand('UP')">UP</button> 
-  </li>
-  <li>
-    <button mat-button (click)="sendCommand('RIGHT')">RIGHT</button> 
-  </li>
-  <li>
-    <button mat-button (click)="sendCommand('LEFT')">LEFT</button> 
-  </li>
-  <li>
-    <button mat-button (click)="sendCommand('TOPRIGHT')">TOPRIGHT</button> 
-  </li>
-  <li>
-    <button mat-button (click)="sendCommand('TOPLEFT')">TOPLEFT</button> 
-  </li>
-  <li>
-    <button mat-button (click)="sendCommand('TELEZOOM')">TELEZOOM</button> 
-  </li>
-  <li>
-    <button mat-button (click)="sendCommand('WIDEZOOM')">WIDEZOOM</button> 
-  </li>
-</ul>
+<div class="main">
+    <h2>Camera options:</h2>
+    <p>
+    <mat-form-field>
+        <input matInput placeholder="Pan speed (0-35)" [(value)]="panSpeed" (input)="panSpeed = $event.target.value">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Tilt speed (0-35)" [(value)]="tiltSpeed" (input)="tiltSpeed = $event.target.value">
+      </mat-form-field>
+    </p>
+    <h2>Available actions: </h2>
+    <ul>
+      <li>
+        <button mat-button (click)="sendCommand('ADDRESS')">ADDRESS</button>
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('HOME')">HOME</button>
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('DOWN')">DOWN</button> 
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('UP')">UP</button> 
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('RIGHT')">RIGHT</button> 
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('LEFT')">LEFT</button> 
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('TOPRIGHT')">TOP RIGHT</button> 
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('TOPLEFT')">TOP LEFT</button> 
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('TELEZOOM')">TELE ZOOM</button> 
+      </li>
+      <li>
+        <button mat-button (click)="sendCommand('WIDEZOOM')">WIDE ZOOM</button> 
+      </li>
+    </ul>
+    
+</div>
 
 <router-outlet></router-outlet>
